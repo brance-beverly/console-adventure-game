@@ -6,7 +6,8 @@ public class ConsoleAdventureGame {
     public static void main(String[] args) {
 
         wantToPlay();
-        String playerName =
+        String playerName;
+
 
     }
 
@@ -17,7 +18,7 @@ public class ConsoleAdventureGame {
         System.out.println("Are you ready to start your Canadian adventure, Eh? Y/N");
         String answer = input.nextLine();
 
-        while (answer.equalsIgnoreCase("n"))
+//        while (answer.equalsIgnoreCase("n"))
         if(answer.equalsIgnoreCase("n")){
             System.out.println("Soory to hear that.");
         } else if (answer.equalsIgnoreCase("y")){
@@ -31,7 +32,9 @@ public class ConsoleAdventureGame {
     public static String whatIsYourName(){
         Scanner input = new Scanner(System.in);
         System.out.println("Would you enter your name please?");
-        return input.nextLine();
+       String playerName = input.nextLine();
+
+        return playerName;
     }
 
 }
