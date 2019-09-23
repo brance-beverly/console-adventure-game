@@ -13,7 +13,7 @@ public class ConsoleAdventureGame {
             playerName = whatIsYourName();
         }
 
-        System.out.println(playerName);
+        display(playerName, 50, 50, 3);
 
     }
 
@@ -43,16 +43,19 @@ public class ConsoleAdventureGame {
         Scanner input = new Scanner(System.in);
         System.out.println("Would you enter your name please?");
         String playerName = input.nextLine();
+        if(playerName.length() >= 10) {
+            System.out.println("Soory bud. That name is too long, Eh? Please try again.");
+            whatIsYourName();
+        } else {
+            System.out.printf("Real glad to meet you %s\n", playerName);
+        }
 
         return playerName;
     }
 
     public static void display(String playerName, int maxHealth, int currentHealth, int syrupCount){
 
-        System.out.println(playerName);
-        System.out.println("Health: " + currentHealth/50);
-        System.out.println("Maple Syrup: ");
-        System.out.println("Run, Eh?");
+        System.out.format("============================================\n%-10s HP: %d/%d Maple Syrup Count: %d\n============================================", playerName, currentHealth, maxHealth, syrupCount);
 
     }
 
