@@ -5,7 +5,6 @@ import java.lang.Math;
 public class ConsoleAdventureGame {
 
     public static void main(String[] args) {
-
         boolean readyToPlay = wantToPlay();
         String playerName = "";
 
@@ -14,13 +13,12 @@ public class ConsoleAdventureGame {
         }
 
         System.out.format("You trudge through a light July snow when all of a sudden a moose appears out of nowhere. Oh geez. This isn't good. What do you do?\n1. Attack\n2. Drink Maple Syrup\n3. Run away\n");
-
         mooseFight(playerName, 50, 50, 3, 50);
 
     }
 
 
-//    this asks the player if they are ready at the beggining
+// --------------------   this asks the player if they are ready at the begin-------------------------------
 
     public static boolean wantToPlay(){
         Scanner input = new Scanner(System.in);
@@ -37,9 +35,9 @@ public class ConsoleAdventureGame {
         } else {
             System.out.println("Somehow you got stuck in Canada without your passport, Eh? To get back to the states you gotta avoid a bunch of hosers, Eh?");
         }
-
         return true;
     }
+// --------------------   this allows player to create valid username -------------------------------
 
     public static String whatIsYourName(){
         Scanner input = new Scanner(System.in);
@@ -54,6 +52,7 @@ public class ConsoleAdventureGame {
 
         return playerName;
     }
+// --------------------   this updates player and enemy information-------------------------------
 
     public static void display(String playerName, int maxHealth, int currentHealth, int syrupCount, String enemyName, int enemyHealth, int enemyMax, int attackDamage){
 
@@ -61,6 +60,7 @@ public class ConsoleAdventureGame {
         System.out.format("============================================\n%-10s HP: %d/%d Attack damage: %d\n============================================\n", enemyName, enemyHealth, enemyMax, attackDamage);
 
     }
+// --------------------   this is used for fighting moose-------------------------------
 
     public static void mooseFight(String playerName, int maxHealth, int currentHealth, int syrupCount, int enemyHealth) {
         display(playerName, maxHealth, currentHealth, syrupCount, "Moose", enemyHealth, 50, 15);
@@ -146,6 +146,7 @@ public class ConsoleAdventureGame {
             System.out.format("Avoiding confrontation is the true Canadian way. You leave the fight and take up permanent residence in Nova Scotia.\nThis is actually really nice, Eh? You apologise to everyone for becoming Canadian.");
         }
     }
+// --------------------   this makes sure player input is between 1-3-------------------------------
 
     public static int getInteger(int min, int max){
         Scanner input = new Scanner(System.in);
