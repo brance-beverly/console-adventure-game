@@ -35,7 +35,7 @@ public class ConsoleAdventureGame {
             System.out.println("I don't know what that means. Try again please.");
             wantToPlay();
         } else {
-            System.out.println("Somehow you got stuck in Canada without your passport, Eh. To get back to the states you gotta avoid a bunch of hosers, Eh.");
+            System.out.println("Somehow you got stuck in Canada without your passport, Eh? To get back to the states you gotta avoid a bunch of hosers, Eh?");
         }
 
         return true;
@@ -71,10 +71,42 @@ public class ConsoleAdventureGame {
             enemyHealth -= 10;
             currentHealth -= 15;
             if(currentHealth <= 0){
+                System.out.println("DACANADACANADACANADACANADACANADACANADACANADACANADACANADACANADACANAD\n" +
+                        "ACANADACANADACAN                                   NADACANADACANADA\n" +
+                        "CANADACANADACANA                 A                 ADACANADACANADAC\n" +
+                        "ANADACANADACANAD                ADA                DACANADACANADACA\n" +
+                        "NADACANADACANADA           AC  ADACA  DA           ACANADACANADACAN\n" +
+                        "ADACANADACANADAC            ANADACANADA            CANADACANADACANA\n" +
+                        "DACANADACANADACA        DA   ADACANADA   AD        ANADACANADACANAD\n" +
+                        "ACANADACANADACAN    ANADACAN  ACANADA  NADACANA    NADACANADACANADA\n" +
+                        "CANADACANADACANA     ADACANADACANADACANADACANA     ADACANADACANADAC\n" +
+                        "ANADACANADACANAD   NADACANADACANADACANADACANADAC   DACANADACANADACA\n" +
+                        "NADACANADACANADA      CANADACANADACANADACANAD      ACANADACANADACAN\n" +
+                        "ADACANADACANADAC         DACANADACANADACAN         CANADACANADACANA\n" +
+                        "DACANADACANADACA           ANADACANADACA           ANADACANADACANAD\n" +
+                        "ACANADACANADACAN         CANADACANADACANAD         NADACANADACANADA\n" +
+                        "CANADACANADACANA                 A                 ADACANADACANADAC\n" +
+                        "ANADACANADACANAD                 D                 DACANADACANADACA\n" +
+                        "NADACANADACANADA                 A                 ACANADACANADACAN\n" +
+                        "ADACANADACANADAC                                   CANADACANADACANA\n" +
+                        "DACANADACANADACANADACANADACANADACANADACANADACANADACANADACANADACANAD\n");
                 System.out.println("Justin Trudeau swoops from the sky with angel wings. He picks you up from the ground and soars to the nearest hospital where you receive free health care. Game Over, Eh?");
             } else if(enemyHealth > 0) {
                 mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
             } else {
+                System.out.println("  |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|\n" +
+                        "  | * * * * * * * * *  :::::::::::::::::::::::::|\n" +
+                        "  |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|\n" +
+                        "  | * * * * * * * * *  :::::::::::::::::::::::::|\n" +
+                        "  |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|\n" +
+                        "  | * * * * * * * * *  ::::::::::::::::::::;::::|\n" +
+                        "  |* * * * * * * * * * OOOOOOOOOOOOOOOOOOOOOOOOO|\n" +
+                        "  |:::::::::::::::::::::::::::::::::::::::::::::|\n" +
+                        "  |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|\n" +
+                        "  |:::::::::::::::::::::::::::::::::::::::::::::|\n" +
+                        "  |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|\n" +
+                        "  |:::::::::::::::::::::::::::::::::::::::::::::|\n" +
+                        "  |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|\n");
                 System.out.println("You slay the moose with a combination of freedom and Muricanness. You flee all the way back to the states and dip some fries in ketchup.");
             }
         } else if (actiion == 2 && syrupCount > 0){
@@ -92,6 +124,25 @@ public class ConsoleAdventureGame {
             System.out.println("I'm really soory but you're out of Maple Syrup, Eh?");
             mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
         } else if (actiion == 3){
+            System.out.println("DACANADACANADACANADACANADACANADACANADACANADACANADACANADACANADACANAD\n" +
+                    "ACANADACANADACAN                                   NADACANADACANADA\n" +
+                    "CANADACANADACANA                 A                 ADACANADACANADAC\n" +
+                    "ANADACANADACANAD                ADA                DACANADACANADACA\n" +
+                    "NADACANADACANADA           AC  ADACA  DA           ACANADACANADACAN\n" +
+                    "ADACANADACANADAC            ANADACANADA            CANADACANADACANA\n" +
+                    "DACANADACANADACA        DA   ADACANADA   AD        ANADACANADACANAD\n" +
+                    "ACANADACANADACAN    ANADACAN  ACANADA  NADACANA    NADACANADACANADA\n" +
+                    "CANADACANADACANA     ADACANADACANADACANADACANA     ADACANADACANADAC\n" +
+                    "ANADACANADACANAD   NADACANADACANADACANADACANADAC   DACANADACANADACA\n" +
+                    "NADACANADACANADA      CANADACANADACANADACANAD      ACANADACANADACAN\n" +
+                    "ADACANADACANADAC         DACANADACANADACAN         CANADACANADACANA\n" +
+                    "DACANADACANADACA           ANADACANADACA           ANADACANADACANAD\n" +
+                    "ACANADACANADACAN         CANADACANADACANAD         NADACANADACANADA\n" +
+                    "CANADACANADACANA                 A                 ADACANADACANADAC\n" +
+                    "ANADACANADACANAD                 D                 DACANADACANADACA\n" +
+                    "NADACANADACANADA                 A                 ACANADACANADACAN\n" +
+                    "ADACANADACANADAC                                   CANADACANADACANA\n" +
+                    "DACANADACANADACANADACANADACANADACANADACANADACANADACANADACANADACANAD\n");
             System.out.format("Avoiding confrontation is the true Canadian way. You leave the fight and take up permanent residence in Nova Scotia.\nThis is actually really nice, Eh? You apologise to everyone for becoming Canadian.");
         }
     }
