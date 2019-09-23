@@ -13,7 +13,9 @@ public class ConsoleAdventureGame {
             playerName = whatIsYourName();
         }
 
-        display(playerName, 50, 50, 3);
+        System.out.format("You trudge through a light July snow when all of a sudden a moose appears out of nowhere. Oh geez. This isn't good. What do you do?\n1. Attack\n2. Drink Maple Syrup\n3. Run away\n");
+
+        mooseFight(playerName, 50, 50, 3, 50);
 
     }
 
@@ -53,9 +55,15 @@ public class ConsoleAdventureGame {
         return playerName;
     }
 
-    public static void display(String playerName, int maxHealth, int currentHealth, int syrupCount){
+    public static void display(String playerName, int maxHealth, int currentHealth, int syrupCount, String enemyName, int enemyHealth, int enemyMax, int attackDamage){
 
-        System.out.format("============================================\n%-10s HP: %d/%d Maple Syrup Count: %d\n============================================", playerName, currentHealth, maxHealth, syrupCount);
+        System.out.format("============================================\n%-10s HP: %d/%d Maple Syrup Count: %d\n============================================\n", playerName, currentHealth, maxHealth, syrupCount);
+        System.out.format("============================================\n%-10s HP: %d/%d Attack damage: %d\n============================================\n", enemyName, enemyHealth, enemyMax, attackDamage);
+
+    }
+
+    public static void mooseFight(String playerName, int maxHealth, int currentHealth, int syrupCount, int enemyHealth) {
+        display(playerName, maxHealth, currentHealth, syrupCount, "Moose", enemyHealth, 50, 15);
 
     }
 
