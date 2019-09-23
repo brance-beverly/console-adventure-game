@@ -64,6 +64,36 @@ public class ConsoleAdventureGame {
 
     public static void mooseFight(String playerName, int maxHealth, int currentHealth, int syrupCount, int enemyHealth) {
         display(playerName, maxHealth, currentHealth, syrupCount, "Moose", enemyHealth, 50, 15);
+        System.out.println("This moose looks upset with you.");
+        int actiion = getInteger(1, 3);
+        if (actiion == 1){
+            System.out.format("You take one of the bags of milk that litter the Canadian countryside and huck it at the moose. It takes 10 damage. \nThe moose is unhappy about this so he bites you kinda hard. You take 15 damage.\n");
+            enemyHealth -= 10;
+            currentHealth -= 15;
+            if(enemyHealth > 0) {
+                mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
+            } else {
+                System.out.println("You beat the moose");
+            }
+        }
+    }
+
+    public static int getInteger(int min, int max){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number between " + min + " and " + max + ": ");
+        int userInput;
+        if(input.hasNextInt()){
+            userInput = input.nextInt();
+        } else {
+            System.out.println("Invalid input. Try again bro.");
+            return getInteger(min, max);
+        }
+        if (userInput < min || userInput > max){
+            System.out.println("Invalid range. Try again bro.");
+            return getInteger(min, max);
+        }else {
+            return userInput;
+        }
 
     }
 
