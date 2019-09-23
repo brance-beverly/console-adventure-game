@@ -70,11 +70,29 @@ public class ConsoleAdventureGame {
             System.out.format("You take one of the bags of milk that litter the Canadian countryside and huck it at the moose. It takes 10 damage. \nThe moose is unhappy about this so he bites you kinda hard. You take 15 damage.\n");
             enemyHealth -= 10;
             currentHealth -= 15;
-            if(enemyHealth > 0) {
+            if(currentHealth <= 0){
+                System.out.println("Justin Trudeau swoops from the sky with angel wings. He picks you up from the ground and soars to the nearest hospital where you receive free health care. Game Over, Eh?");
+            } else if(enemyHealth > 0) {
                 mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
             } else {
-                System.out.println("You beat the moose");
+                System.out.println("You slay the moose with a combination of freedom and Muricanness. You flee all the way back to the states and dip some fries in ketchup.");
             }
+        } else if (actiion == 2 && syrupCount > 0){
+            System.out.format("You grab one of the bottles of Maple Syrup that all visitors are given upon arrival in Canada.\nYou feel the blessing of the queen and gain 30 health.\n");
+            if (currentHealth + 30 > maxHealth) {
+                syrupCount -= 1;
+                currentHealth = maxHealth;
+                mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
+            } else {
+                syrupCount -= 1;
+                currentHealth += 30;
+                mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
+            }
+        } else if(actiion == 2 && syrupCount == 0) {
+            System.out.println("I'm really soory but you're out of Maple Syrup, Eh?");
+            mooseFight(playerName, maxHealth, currentHealth, syrupCount, enemyHealth);
+        } else if (actiion == 3){
+            System.out.format("Avoiding confrontation is the true Canadian way. You leave the fight and take up permanent residence in Nova Scotia.\nThis is actually really nice, Eh? You apologise to everyone for becoming Canadian.");
         }
     }
 
@@ -85,11 +103,11 @@ public class ConsoleAdventureGame {
         if(input.hasNextInt()){
             userInput = input.nextInt();
         } else {
-            System.out.println("Invalid input. Try again bro.");
+            System.out.println("Soory bud. That's an invalid input. Try again, Eh?");
             return getInteger(min, max);
         }
         if (userInput < min || userInput > max){
-            System.out.println("Invalid range. Try again bro.");
+            System.out.println("Soory bud. That's an invalid range. Try again, Eh?");
             return getInteger(min, max);
         }else {
             return userInput;
